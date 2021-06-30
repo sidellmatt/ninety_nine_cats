@@ -1,0 +1,65 @@
+<h1><%=@cat.name%></h1>
+
+<table>
+    <tbody>
+        <tr>
+            <td>Birth date:</td>
+            <td> <%=@cat.birth_date%> </td>
+        </tr>
+        <tr>
+            <td>Color:</td>
+            <td> <%=@cat.color%> </td>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td> <%=@cat.name%> </td>
+        </tr>
+        <tr>
+            <td>Sex:</td>
+            <td> <%=@cat.sex%> </td>
+        </tr>
+        <tr>
+            <td>Description:</td>
+            <td> <%=@cat.description%> </td>
+        </tr>
+        <tr>
+            <td>Rental Requests:</td>
+            <td> 
+                <ul>
+                    <%@cat.cat_rental_requests.order(:start_date).each do |request|%>
+                        <li><%= {"Start": request.start_date, "End": request.end_date, "Status": request.status} %></li>
+                        <% if request.pending? %>
+                            <form action="<%= "/cat_rental_requests/#{request.id}/approve" %>" method="get">
+                                <input type="hidden" name="_method" value="patch">
+                                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+                                <input type="submit" value="Approve Request">
+                            </form>
+
+                            <form action="<%= "/cat_rental_requests/#{request.id}/deny" %>" method="get">
+                                <input type="hidden" name="_method" value="patch">
+                                <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+                                <input type="submit" value="Deny Request">
+                            </form>
+                        <% end%>
+                    <% end%>
+                </ul>
+            </td>
+
+        </tr>
+    </tbody>
+</table>
+
+<br>
+
+<footer class="footer">
+
+    <a href="<%= edit_cat_url(@cat) %>">Edit this cat</a>
+
+    <br>
+
+    <a href="<%=cats_url%>">Back to all cats</a>
+
+</footer>
+

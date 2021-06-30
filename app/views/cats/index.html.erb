@@ -1,0 +1,22 @@
+<h1>All Cats</h1>
+    
+<ul>
+    <%@cats.each do |cat|%>
+        <li>
+            <a href="<%= cat_url(cat) %>">
+                <%= cat.name%>
+            </a>
+        </li>
+    <%end%>
+</ul>
+<footer>
+    <div>
+        <a href="/cats/new">Add a cat to the collection!</a>
+    </div>
+
+    <div>
+        <a href="<%= new_cat_rental_request_url %>">Make a Rental Request!</a>
+    </div>
+
+    <div>Paid for in part by Rainbow Suspenders Guy</div>
+</footer> 
