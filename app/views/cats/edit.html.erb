@@ -1,5 +1,7 @@
 <header>
-    <h1>Edit <%= @cat.name %></h1>
+    <h1>
+        <div>Edit <%= @cat.name %></div>
+    </h1>
 </header>
 
 <%= render "form", cat: @cat, action: :edit %>
