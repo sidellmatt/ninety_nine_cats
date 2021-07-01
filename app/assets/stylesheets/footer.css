@@ -2,16 +2,19 @@ footer {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    background-color: cornsilk;
+    background-color: beige;
     justify-content: space-between;
     position: absolute;
     bottom: 0;
+
 }
 
 .link {
     background-color: cornsilk;
-    color: rgb(124, 28, 28);
+    color: blue;
     padding: 1px;
     font-weight: 600;
     font-size: 20px;
+    border: black;
+    border-style: solid;
 }

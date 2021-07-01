@@ -9,15 +9,28 @@ ul > li {
     background-color: beige;
     color: skyblue;
     font-weight: 600;
+    border: black;
+    border-style: solid;
+}
+
+li > a {
+    color: red;
 }
 
 table {
-    background-color: khaki;
+    background-color: beige;
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 20px;
+    border: black;
+    border-style: solid;
 }
 
 form {
-    background-color: khaki;
+    background-color: beige;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    border: black;
+    border-style: solid;
 }
