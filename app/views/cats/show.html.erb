@@ -1,4 +1,6 @@
-<h1><%=@cat.name%></h1>
+<header>
+    <h1><%=@cat.name%></h1>
+</header>
 
 <table>
     <tbody>
@@ -53,13 +55,13 @@
 
 <br>
 
-<footer class="footer">
-
-    <a href="<%= edit_cat_url(@cat) %>">Edit this cat</a>
-
-    <br>
-
-    <a href="<%=cats_url%>">Back to all cats</a>
-
+<footer>
+    <div>
+        <a class="link" href="<%= edit_cat_url(@cat) %>">Edit this cat</a>
+    </div>
+    
+    <div> 
+        <a class="link" href="<%=cats_url%>">Back to all cats</a>
+    </div>
 </footer>
 

@@ -1,0 +1,9 @@
+header > h1 {
+    display: flex;
+    width: 300px;
+    margin: 0 auto;
+    background-color: cornsilk;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}

@@ -1,0 +1,17 @@
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    background-color: cornsilk;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+}
+
+.link {
+    background-color: cornsilk;
+    color: rgb(124, 28, 28);
+    padding: 1px;
+    font-weight: 600;
+    font-size: 20px;
+}

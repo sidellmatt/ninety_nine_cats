@@ -1,0 +1,23 @@
+ul {
+    display: flex;
+    justify-content: space-between;
+    display: block;
+    float: left;
+}
+
+ul > li {
+    background-color: beige;
+    color: skyblue;
+    font-weight: 600;
+}
+
+table {
+    background-color: khaki;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+form {
+    background-color: khaki;
+}

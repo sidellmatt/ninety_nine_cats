@@ -1,4 +1,6 @@
-<h1>All Cats</h1>
+<header>
+    <h1>All Cats</h1>
+<header>
     
 <ul>
     <%@cats.each do |cat|%>
@@ -9,14 +11,13 @@
         </li>
     <%end%>
 </ul>
+
 <footer>
     <div>
-        <a href="/cats/new">Add a cat to the collection!</a>
+        <a class="link" href="/cats/new">Add a cat to the collection!</a>
     </div>
 
     <div>
-        <a href="<%= new_cat_rental_request_url %>">Make a Rental Request!</a>
+        <a class="link" href="<%= new_cat_rental_request_url %>">Make a Rental Request!</a>
     </div>
-
-    <div>Paid for in part by Rainbow Suspenders Guy</div>
 </footer> 
