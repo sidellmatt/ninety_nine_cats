@@ -1,17 +1,22 @@
 header > h1 {
     display: flex;
-    width: 200px;
     margin: 0 auto;
     
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    font-size: x-large;
+    font-size: xx-large;
     
     position: relative;
     text-align: center;
+    border-style: solid;
+
+    justify-content: center;
+    
+    background-color: #336B87;
 }
 
 h1 > div {
-    background-color: beige;
+    color: cornsilk;
+    
     border-style: solid;
 }

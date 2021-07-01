@@ -19,7 +19,9 @@ class CatRentalRequest < ApplicationRecord
 
     def does_not_overlap_approved_request
         if self.overlapping_approved_requests.where('cat_id = ?', self.cat_id).exists?
-            self.errors.add(:base, "Cannot overlap with an approved request")
+            if self.status == "APPROVED"
+                self.errors.add(:base, "Cannot overlap with an approved request")
+            end
         end
     end
 
@@ -44,9 +46,9 @@ class CatRentalRequest < ApplicationRecord
                 request.deny!
                 request.save
             end
+            self.status = "APPROVED"
+            self.save!
         end
-        self.status = "APPROVED"
-        self.save!
     end
     
     def pending?

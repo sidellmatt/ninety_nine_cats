@@ -2,15 +2,14 @@ footer {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    background-color: beige;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 0;
+    background-color: #2A3132;
+    justify-content: center;
+    position: relative;
 
 }
 
 .link {
-    background-color: cornsilk;
+    background-color: beige;
     color: blue;
     padding: 1px;
     font-weight: 600;
